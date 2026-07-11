@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0e1526;
+  --color-navy-950: #060b18;
+  --color-navy-900: #0a1226;
+  --color-navy-800: #101b36;
+  --color-navy-700: #172746;
+  --color-navy-600: #22375f;
+  --color-gold-600: #a9803f;
+  --color-gold-500: #c6a15f;
+  --color-gold-400: #d8bb82;
+  --color-gold-300: #e9d6ab;
+  --color-cream: #faf8f4;
+  --color-paper: #ffffff;
+  --color-slate-600: #4b5568;
+  --color-slate-500: #6b7488;
+  --color-slate-400: #98a0b3;
+  --color-hairline: #e6e2d8;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-navy-950: var(--color-navy-950);
+  --color-navy-900: var(--color-navy-900);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+  --color-gold-600: var(--color-gold-600);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-300: var(--color-gold-300);
+  --color-cream: var(--color-cream);
+  --color-paper: var(--color-paper);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-500: var(--color-slate-500);
+  --color-slate-400: var(--color-slate-400);
+  --color-hairline: var(--color-hairline);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.8s ease forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-gold-300);
+  color: var(--color-navy-950);
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: var(--animate-fade-up);
+}
