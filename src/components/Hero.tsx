@@ -29,7 +29,9 @@ export default function Hero() {
 
           <h1 className="reveal is-visible font-display balance text-5xl font-light leading-[1.05] text-white sm:text-6xl lg:text-7xl">
             Servicios legales con{" "}
-            <span className="italic text-gold-300">enfoque humano.</span>
+            <span className="italic text-gold-300 font-[family-name:var(--font-fraunces-italic)]">
+              enfoque humano.
+            </span>
           </h1>
 
           <p

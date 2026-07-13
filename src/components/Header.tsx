@@ -39,6 +39,7 @@ export default function Header() {
             width={171}
             height={60}
             priority
+            fetchPriority="high"
             className="h-9 w-auto brightness-0 invert md:h-10"
           />
         </Link>
